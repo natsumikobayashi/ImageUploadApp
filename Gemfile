@@ -71,8 +71,6 @@ group :test do
   gem "webdrivers"
 end
 
+gem 'image_processing', '~> 1.2'
 gem 'dotenv-rails'
-
-gem 'refile', require: 'refile/rails', github: 'manfe/refile'
-gem 'refile-mini_magick'
-gem 'refile-s3', github: 'refile/refile-s3', ref: '768d60d4e5e5e6a00a874767018ff8e31b1da3cd'
+gem "aws-sdk-s3", require: false

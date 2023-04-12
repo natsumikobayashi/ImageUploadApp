@@ -3,7 +3,6 @@
   <%= form.label :name %>
   <%= form.text_field :name %>
   <%= form.label :image %>
-  <%= form.attachment_field :image %>
-  <!--attachment_fieldはrefileのfield-->
+  <%= form.file_field :image %>
   <p><%= form.submit "Upload" %></p>
 <% end %>
