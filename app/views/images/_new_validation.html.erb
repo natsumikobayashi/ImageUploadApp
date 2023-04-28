@@ -1,0 +1,24 @@
+<script>
+  var imageForm = document.querySelector("#imageForm");
+
+  var nameField = document.querySelector('#name');
+
+  var name = document.querySelector("#image_name");
+
+  var namePara = document.createElement('p');
+
+  name.addEventListener('input', function(event){
+    if (name.value === ""){
+      namePara.textContent = "名前を入力してください";
+      namePara.style.color = "red";
+      name.parentElement.style.border = "2px solid red";
+      activeName = false;
+    } else {
+      name.parentElement.style.border = "2px solid lightgreen";
+      namePara.textContent = "";
+      activeName = true;
+    }
+    nameField.appendChild(namePara);
+  });
+
+</script>
