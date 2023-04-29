@@ -2,8 +2,12 @@
 <%= form_with model: @image, id: "imageForm", local: true do |form| %>
   <div id="name">
     <%= form.label :name %>
-    <%= form.text_field :name %>  
+    <div id="name-form-field">
+    <%= form.text_field :name, id: "name-form" %>
+    </div>
   </div>
+  <div id="name-error"></div>
+
   <div id="image">
     <%= form.label :image %>
     <%= form.file_field :image %>
