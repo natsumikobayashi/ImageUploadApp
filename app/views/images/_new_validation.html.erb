@@ -1,36 +1,22 @@
 <script>
-  var imageForm = document.querySelector("#imageForm");
 
   var nameField = document.querySelector('#name');
 
-  // var name = document.querySelector("#image_name");
   var nameError = document.querySelector("#name-error");
-  var nameFormField = document.querySelector("#name-form-field");
   var nameForm = document.querySelector("#name-form");
 
-  var namePara = document.createElement('p');
 
-  nameField.addEventListener('focusin', function(event){
-    console.log(nameForm.value === "");
+  nameField.addEventListener('input', ()=>{
     if (nameForm.value === "") {
-      console.log('test')
       nameError.textContent = "名前を入力してください";
       nameError.style.color = "red";
-      nameForm.classList.add("name-form");
-      // nameFormField.style.border = "2px solid red";
-      // nameForm.style.border = "2px solid red";
+      nameForm.classList.add("name-form-error");
+      nameForm.classList.remove("name-form-success");
+    } else {
+      nameError.textContent = "";
+      nameForm.classList.remove("name-form");
+      nameForm.classList.add("name-form-success");
     }
-    // if (name.value === ""){
-    //   namePara.textContent = "名前を入力してください";
-    //   namePara.style.color = "red";
-    //   name.parentElement.style.border = "2px solid red";
-    //   activeName = false;
-    // } else {
-      // nameForm.style.border = "2px solid lightgreen";
-    //   namePara.textContent = "";
-    //   activeName = true;
-    // }
-    // nameField.appendChild(namePara);
   });
 
 </script>

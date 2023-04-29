@@ -13,7 +13,12 @@
  *= require_tree .
  *= require_self
  */
-.name-form {
+.name-form-error {
   border: solid 3px red;
+  outline: 0;
+}
+
+.name-form-success {
+  border: solid 3px lightgreen;
   outline: 0;
 }
