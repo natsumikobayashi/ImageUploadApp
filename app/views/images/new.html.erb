@@ -2,9 +2,7 @@
 <%= form_with model: @image, id: "imageForm", local: true do |form| %>
   <div id="name">
     <%= form.label :name %>
-    <div id="name-form-field">
     <%= form.text_field :name, id: "name-form" %>
-    </div>
   </div>
   <div id="name-error"></div>
 
