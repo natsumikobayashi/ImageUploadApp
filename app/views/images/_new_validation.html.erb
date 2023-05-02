@@ -6,10 +6,15 @@
   var nameForm = document.querySelector("#name-form");
 
 
-  nameField.addEventListener('input', ()=>{
+  nameForm.addEventListener('input', ()=>{
     if (nameForm.value === "") {
       nameError.textContent = "名前を入力してください";
       nameError.style.color = "red";
+      nameForm.classList.add("name-form-error");
+      nameForm.classList.remove("name-form-success");
+    } else if(nameForm.value.length < 3){
+      nameError.textContent = "3文字以上入力してください";
+      nameError.style.color = "orange";
       nameForm.classList.add("name-form-error");
       nameForm.classList.remove("name-form-success");
     } else {
