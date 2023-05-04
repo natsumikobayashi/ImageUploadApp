@@ -1,6 +1,6 @@
 <h1>Images#new</h1>
 <%= form_with model: @image, id: "imageForm", local: true do |form| %>
-  <div id="name">
+  <div id="name" style="margin-bottom: 3px";>
     <%= form.label :name %>
     <%= form.text_field :name, id: "name-form" %>
   </div>
@@ -8,8 +8,9 @@
 
   <div id="image">
     <%= form.label :image %>
-    <%= form.file_field :image %>
+    <%= form.file_field :image, id: "image-form" %>
   </div>
+  <div id="image-error"></div>
   <p><%= form.submit "Upload" %></p>
 <% end %>
 

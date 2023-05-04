@@ -18,7 +18,8 @@
   outline: 0;
 }
 
-.name-form-success {
+.name-form-success,
+.image-form-success{
   border: solid 3px lightgreen;
   outline: 0;
 }
