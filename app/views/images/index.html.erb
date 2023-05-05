@@ -8,3 +8,11 @@
   <%= link_to "詳細", image_path(image) %>
   <%= link_to "削除", image_path(image), method: :delete %>
 <% end %>
+
+<span id="back">
+  <a href="#">
+    <%= image_tag "arrow.png" %>
+  </a>
+</span>
+
+<%= javascript_include_tag "scroll.js" %>
